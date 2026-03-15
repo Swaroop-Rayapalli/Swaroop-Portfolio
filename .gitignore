@@ -1,6 +1,37 @@
+# Virtual Environment
 .venv/
+env/
+venv/
+ENV/
+
+# Python compiled files
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+
+# Local Data / Database
+# messages.json stores local form submissions
 messages.json
+*.db
+*.sqlite3
+
+# Secrets / Environment Variables
+.env
+.env.local
+
+# Editor / IDE settings
 .vscode/
+.idea/
+
+# OS specific files
 .DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Distribution / Build
+dist/
+build/
+*.egg-info/
