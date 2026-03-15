@@ -5,6 +5,10 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from datetime import datetime
 from flask import Flask, request, jsonify, send_from_directory
+from dotenv import load_dotenv
+
+# Load variables from .env if it exists
+load_dotenv()
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
