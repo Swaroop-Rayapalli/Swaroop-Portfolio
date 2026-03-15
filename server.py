@@ -102,10 +102,15 @@ def load_messages():
 
 
 def save_message(msg):
-    messages = load_messages()
-    messages.append(msg)
-    with open(MESSAGES_FILE, "w") as f:
-        json.dump(messages, f, indent=2)
+    try:
+        messages = load_messages()
+        messages.append(msg)
+        with open(MESSAGES_FILE, "w") as f:
+            json.dump(messages, f, indent=2)
+        return True
+    except Exception as e:
+        print(f"[Storage Error] Could not save to {MESSAGES_FILE}: {e}")
+        return False
 
 
 # ── Routes ────────────────────────────────────────────────────────────────────
