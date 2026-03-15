@@ -47,7 +47,7 @@ PROJECTS = [
         "long_description": "An elegant, highly responsive electronics storefront heavily inspired by Apple's minimalist design philosophy. This frontend project focuses on achieving near-perfect Lighthouse performance scores through meticulous optimization, semantic HTML5 structure, and modern CSS3 techniques without relying on heavy frontend frameworks.",
         "tech": ["HTML5", "CSS3", "JavaScript", "SEO"],
         "github": "https://github.com/swaroop0608",
-        "demo": "#",
+        "demo": "https://electron-store.vercel.app",
         "category": "Frontend",
         "image": "images/ele1.png",
         "images": ["images/ele1.png", "images/ele3.png", "images/ele2.png"]
@@ -71,7 +71,7 @@ PROJECTS = [
         "long_description": "Amma Pickels is a dedicated e-commerce platform showcasing authentic, homemade pickle varieties. The platform features a clean product catalog, easy ordering flow, and a warm, traditional design that reflects the brand's home-kitchen roots.",
         "tech": ["HTML/CSS", "JavaScript"],
         "github": "https://github.com/swaroop0608",
-        "demo": "#",
+        "demo": "https://amma-pickels.vercel.app",
         "category": "Frontend",
         "image": "images/pickels1.png",
         "images": ["images/pickels1.png", "images/pickels2.png", "images/pickels3.png"]
