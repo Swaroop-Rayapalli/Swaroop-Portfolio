@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Swaroop Rayapalli</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #000;
+            --text: #333;
+            --light-text: #666;
+            --border: #ddd;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.5;
+            color: var(--text);
+            margin: 0;
+            padding: 40px 20px;
+            background: #f4f4f4;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 50px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 28px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .contact {
+            margin-top: 10px;
+            font-size: 14px;
+            color: var(--light-text);
+        }
+
+        .contact span {
+            margin: 0 10px;
+        }
+
+        section {
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            font-size: 16px;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 5px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+
+        h2::before {
+            content: "■";
+            margin-right: 10px;
+            font-size: 12px;
+            color: #000;
+        }
+
+        .item {
+            margin-bottom: 15px;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        .item-sub {
+            font-style: italic;
+            font-size: 14px;
+            color: var(--light-text);
+            margin-bottom: 5px;
+        }
+
+        ul {
+            margin: 5px 0 0 20px;
+            padding: 0;
+            font-size: 14px;
+        }
+
+        li {
+            margin-bottom: 4px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 10px;
+            font-size: 14px;
+        }
+
+        .skill-cat {
+            font-weight: 600;
+        }
+
+        .actions {
+            max-width: 800px;
+            margin: 20px auto 0;
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-print {
+            background: #000;
+            color: #fff;
+        }
+
+        .btn-back {
+            background: #eee;
+            color: #333;
+        }
+
+        @media print {
+            body {
+                background: #fff;
+                padding: 0;
+            }
+
+            .container {
+                box-shadow: none;
+                padding: 0;
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .actions {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="actions">
+        <a href="/" class="btn btn-back">← Back to Portfolio</a>
+        <button onclick="window.print()" class="btn btn-print">Download PDF / Print</button>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>SWAROOP RAYAPALLI</h1>
+            <div class="contact">
+                +91-9030600126 <span>|</span> rswaroop0608@gmail.com <span>|</span> Visakhapatnam, India
+            </div>
+        </header>
+
+        <section>
+            <h2>CAREER OBJECTIVE</h2>
+            <p style="font-size: 14px;">Motivated and detail-oriented Cybersecurity and Full Stack Development student
+                pursuing B.Tech in Computer Science at GITAM University (Graduating 2027). Skilled in Python, Web
+                Application Security, and Penetration Testing. Seeking to contribute to a security-focused organization
+                while continuously developing expertise in ethical hacking and secure web systems.</p>
+        </section>
+
+        <section>
+            <h2>EDUCATION</h2>
+            <div class="item">
+                <div class="item-header">
+                    <span>Bachelor of Technology – Computer Science Engineering</span>
+                </div>
+                <div class="item-sub">GITAM School of Science, Visakhapatnam (2023 – 2027) | CGPA: 8.0/10</div>
+            </div>
+            <div class="item">
+                <div class="item-header">Class XII – CBSE (2022)</div>
+                <div class="item-sub">Result: 75%</div>
+            </div>
+            <div class="item">
+                <div class="item-header">Class X – CBSE (2020)</div>
+                <div class="item-sub">Result: 75%</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>TECHNICAL SKILLS</h2>
+            <div class="skills-grid">
+                <div class="skill-cat">Cybersecurity:</div>
+                <div>OWASP, Burp Suite, Penetration Testing, Web & Mobile App Security, XSS, Reconnaissance</div>
+
+                <div class="skill-cat">Programming:</div>
+                <div>Python, Java, JavaScript</div>
+
+                <div class="skill-cat">Web Dev:</div>
+                <div>Flask, React.js, Bootstrap, Full Stack (MERN), REST APIs</div>
+
+                <div class="skill-cat">Tools:</div>
+                <div>Kali Linux, Nmap, Wireshark, Postman, Git, VS Code</div>
+
+                <div class="skill-cat">Other:</div>
+                <div>Prompt Engineering, Vulnerability Assessment, Flask Web App Development</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>CERTIFICATIONS</h2>
+            <ul>
+                <li>Hackingflix (Cybersecurity & Ethical Hacking) – June 2025 – Present</li>
+                <li>Infosys Certification (Tech & AI) – June 2025 – Present</li>
+                <li>AI for Techies – Sept 2025 – Present</li>
+                <li>SCOA (Security & Cloud Operations Associate) – Sept 2025 – Present</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>INTERNSHIP EXPERIENCE</h2>
+            <div class="item">
+                <div class="item-header">Cyber Security Intern – 1Stop Solution</div>
+                <div class="item-sub">June 2025 – July 2025</div>
+                <ul>
+                    <li>Built internal cybersecurity tools for vulnerability scanning and testing.</li>
+                    <li>Assisted in penetration testing and bug fixing for client applications.</li>
+                    <li>Conducted app security assessments aligned with OWASP Top 10.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>PROJECTS</h2>
+            <div class="item">
+                <div class="item-header">Information Gathering Tool</div>
+                <div class="item-sub">July 2025</div>
+                <ul>
+                    <li>Developed a Python-based tool for gathering website metadata and open-source intelligence.</li>
+                    <li>Automated reconnaissance processes to identify potential vulnerabilities.</li>
+                    <li>Tech Stack: Python, Requests, BeautifulSoup, Socket</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>ACHIEVEMENTS</h2>
+            <ul>
+                <li>Completed multiple hands-on cybersecurity certifications.</li>
+                <li>Created custom tools for ethical hacking labs and testing environments.</li>
+                <li>Recognized for proactive learning in cybersecurity and AI integration.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>LANGUAGES</h2>
+            <p style="font-size: 14px;">English (Fluent), Telugu (Fluent)</p>
+        </section>
+    </div>
+
+</body>
+
+</html>

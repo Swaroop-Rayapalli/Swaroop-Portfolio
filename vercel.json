@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/contact", "destination": "server.py" },
+    { "source": "/api/(.*)", "destination": "server.py" },
+    { "source": "/resume", "destination": "resume.html" },
+    { "source": "/(.*)", "destination": "/$1" }
+  ]
+}
