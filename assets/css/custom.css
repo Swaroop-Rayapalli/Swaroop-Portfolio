@@ -196,34 +196,146 @@ body::before {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 10px 0;
+  padding: 0;
   z-index: 1000;
-  backdrop-filter: blur(10px);
-  background: rgba(9, 9, 11, 0.8);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  background: rgba(9, 9, 11, 0.85);
   border-bottom: 1px solid var(--border-card);
-  font-size: 30px;
+}
+
+.nav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 2px;
+  background: linear-gradient(to right, #fff, var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .nav-container nav ul {
   display: flex;
-  justify-content: center;
   list-style: none;
   gap: 30px;
+  margin: 0;
 }
 
 .nav-container nav ul li a {
   text-decoration: none;
   color: var(--text-muted);
-  font-weight: 500;
-  font-size: 14px;
+  font-weight: 600;
+  font-size: 13px;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: color 0.3s;
+  letter-spacing: 1.5px;
+  transition: all 0.3s ease;
+  padding: 5px 0;
+  position: relative;
+}
+
+.nav-container nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.nav-container nav ul li a:hover::after,
+.nav-container nav ul li a.active::after {
+  width: 100%;
 }
 
 .nav-container nav ul li a:hover,
 .nav-container nav ul li a.active {
   color: var(--accent);
+}
+
+/* ── Mobile Menu Toggle ──────────────────────────────────────── */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1010;
+}
+
+.nav-toggle span {
+  width: 100%;
+  height: 2.5px;
+  background-color: #fff;
+  border-radius: 10px;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.nav-toggle.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.nav-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+@media screen and (max-width: 768px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-container nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background: rgba(9, 9, 11, 0.98);
+    backdrop-filter: blur(20px);
+    border-left: 1px solid var(--border-card);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1005;
+  }
+
+  .nav-container nav.active {
+    right: 0;
+  }
+
+  .nav-container nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .nav-container nav ul li a {
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+  }
 }
 
 /* ── Hero Section ────────────────────────────────────────────── */
@@ -570,6 +682,7 @@ body::before {
   color: var(--accent) !important;
 }
 
+/* ── Hero Actions ────────────────────────────────────────────── */
 .hero-actions {
   display: flex;
   gap: 15px;
@@ -606,6 +719,66 @@ body::before {
 .btn-outline:hover {
   background: rgba(255, 255, 255, 0.05);
   border-color: var(--accent);
+}
+
+/* ── Hero Spacing & Mobile Scaling ─────────────────────────── */
+@media screen and (max-width: 768px) {
+  #header {
+    padding: 60px 0 40px !important;
+  }
+
+  .cyber-core-wrapper {
+    height: 350px;
+    margin: 10px 0;
+  }
+
+  .cyber-core-front,
+  .cyber-core-back {
+    width: 130px;
+    height: 130px;
+  }
+
+  .ring-1 { width: 220px; height: 220px; }
+  .ring-2 { width: 170px; height: 170px; }
+  .ring-3 { width: 120px; height: 120px; }
+
+  .cyber-core {
+    width: 90px;
+    height: 90px;
+  }
+
+  .cyber-s {
+    font-size: 3.5rem;
+  }
+
+  .cyber-core-inner {
+    width: 60px;
+    height: 60px;
+  }
+
+  #header .hero-actions {
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    gap: 15px;
+  }
+
+  #header .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Adjust floating resume button to avoid overlap with hero content */
+  .resume-btn {
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    font-size: 12px;
+  }
 }
 
 /* ── Section Titles ──────────────────────────────────────────── */
