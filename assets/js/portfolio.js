@@ -354,13 +354,6 @@
     }
   };
 
-  /* ── 3D Profile Flip Logic ─────────────────────────────────────── */
-  window.toggleProfileFlip = function () {
-    const wrapper = document.querySelector('.cyber-core-wrapper');
-    if (wrapper) {
-      wrapper.classList.toggle('flipped');
-    }
-  };
 
   window.addEventListener('click', function (e) {
     const modal = document.getElementById('project-modal');
