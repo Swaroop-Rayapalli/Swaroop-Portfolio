@@ -9,9 +9,10 @@
     <style>
         :root {
             --primary: #000;
-            --text: #333;
-            --light-text: #666;
-            --border: #ddd;
+            --text: #222;
+            --light-text: #555;
+            --border: #ccc;
+            --link: #0066cc;
         }
 
         * {
@@ -28,103 +29,141 @@
         }
 
         .container {
-            max-width: 800px;
+            max-width: 850px;
             margin: 0 auto;
             background: #fff;
-            padding: 50px;
+            padding: 50px 60px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         }
 
         header {
             text-align: center;
-            border-bottom: 2px solid var(--primary);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 28px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .contact {
-            margin-top: 10px;
-            font-size: 14px;
-            color: var(--light-text);
-        }
-
-        .contact span {
-            margin: 0 10px;
-        }
-
-        section {
             margin-bottom: 25px;
         }
 
-        h2 {
-            font-size: 16px;
+        h1 {
+            margin: 0 0 8px 0;
+            font-size: 26px;
             text-transform: uppercase;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 5px;
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
+            letter-spacing: 2px;
+            font-weight: 700;
         }
 
-        h2::before {
-            content: "■";
-            margin-right: 10px;
-            font-size: 12px;
-            color: #000;
+        .contact-line {
+            font-size: 14px;
+            color: var(--light-text);
+            margin-bottom: 6px;
+        }
+
+        .contact-line span {
+            margin: 0 8px;
+            color: #999;
+        }
+
+        .links-line {
+            font-size: 14px;
+        }
+
+        .links-line a {
+            color: var(--link);
+            text-decoration: none;
+        }
+
+        .links-line a:hover {
+            text-decoration: underline;
+        }
+
+        .links-line span {
+            margin: 0 10px;
+            color: #999;
+        }
+
+        section {
+            margin-bottom: 22px;
+        }
+
+        h2 {
+            font-size: 15px;
+            text-transform: uppercase;
+            border-bottom: 1px solid #000;
+            padding-bottom: 4px;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+            font-weight: 700;
         }
 
         .item {
-            margin-bottom: 15px;
+            margin-bottom: 14px;
         }
 
         .item-header {
             display: flex;
             justify-content: space-between;
             font-weight: 600;
-            font-size: 15px;
+            font-size: 14.5px;
         }
 
         .item-sub {
+            display: flex;
+            justify-content: space-between;
             font-style: italic;
             font-size: 14px;
             color: var(--light-text);
-            margin-bottom: 5px;
-        }
-
-        ul {
-            margin: 5px 0 0 20px;
-            padding: 0;
-            font-size: 14px;
-        }
-
-        li {
             margin-bottom: 4px;
         }
 
-        .skills-grid {
-            display: grid;
-            grid-template-columns: 120px 1fr;
-            gap: 10px;
+        .project-title {
+            font-weight: 700;
+            font-size: 14.5px;
+        }
+
+        .project-tech {
+            font-style: italic;
+            font-size: 14px;
+            color: var(--light-text);
+        }
+
+        ul {
+            margin: 4px 0 0 18px;
+            padding: 0;
+            font-size: 13.5px;
+        }
+
+        li {
+            margin-bottom: 3px;
+        }
+
+        .skills-table {
+            width: 100%;
+            font-size: 14px;
+            border-collapse: collapse;
+        }
+
+        .skills-table td {
+            padding: 3px 0;
+            vertical-align: top;
+        }
+
+        .skills-table .cat {
+            font-weight: 700;
+            width: 240px;
+        }
+
+        .cert-line {
             font-size: 14px;
         }
 
-        .skill-cat {
-            font-weight: 600;
+        .cert-line span {
+            margin: 0 12px;
+            color: #999;
         }
 
         .actions {
-            max-width: 800px;
-            margin: 20px auto 0;
+            max-width: 850px;
+            margin: 0 auto 20px;
             display: flex;
-            justify-content: flex-end;
-            gap: 10px;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .btn {
@@ -177,108 +216,295 @@
     <div class="container">
         <header>
             <h1>SWAROOP RAYAPALLI</h1>
-            <div class="contact">
-                +91-9030600126 <span>|</span> rswaroop0608@gmail.com <span>|</span> Visakhapatnam, India
+            <div class="contact-line">
+                Visakhapatnam, Andhra Pradesh <span>—</span> +91-9030600126 <span>—</span> rswaroop0608@gmail.com
+            </div>
+            <div class="links-line">
+                <a href="https://www.linkedin.com/in/swaroop-rayapalli-aa8682293" target="_blank">LinkedIn</a>
+                <span>—</span>
+                <a href="https://github.com/Swaroop-Rayapalli" target="_blank">GitHub</a>
+                <span>—</span>
+                <a href="https://swaroop-rayapalli.vercel.app" target="_blank">Portfolio</a>
             </div>
         </header>
 
         <section>
-            <h2>CAREER OBJECTIVE</h2>
-            <p style="font-size: 14px;">Motivated and detail-oriented Cybersecurity and Full Stack Development student
-                pursuing B.Tech in Computer Science at GITAM University (Graduating 2027). Skilled in Python, Web
-                Application Security, and Penetration Testing. Seeking to contribute to a security-focused organization
-                while continuously developing expertise in ethical hacking and secure web systems.</p>
+            <h2>PROFESSIONAL SUMMARY</h2>
+            <p style="font-size: 14px; margin: 0;">Computer Science Engineering student with hands-on experience in Data Science, Machine Learning, Web Development, Cybersecurity, and Cloud Computing. Experienced in building predictive models, NLP applications, recommendation systems, responsive web applications, and deploying cloud-based solutions.</p>
         </section>
 
         <section>
             <h2>EDUCATION</h2>
             <div class="item">
                 <div class="item-header">
-                    <span>Bachelor of Technology – Computer Science Engineering</span>
+                    <span>GITAM University, Visakhapatnam</span>
+                    <span>2023 – 2027</span>
                 </div>
-                <div class="item-sub">GITAM School of Science, Visakhapatnam (2023 – 2027) | CGPA: 8.0/10</div>
+                <div class="item-sub">
+                    <span>B.Tech in Computer Science Engineering</span>
+                    <span>CGPA: 7.5/10</span>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>EXPERIENCE</h2>
+            <div class="item">
+                <div class="item-header">
+                    <span>Cyber Security Intern – 1Stop Solution</span>
+                    <span>Jun 2025 – Jul 2025</span>
+                </div>
+                <ul>
+                    <li>Performed vulnerability assessments, OWASP-based security testing, reconnaissance, penetration testing, and Python-based security automation.</li>
+                </ul>
             </div>
             <div class="item">
-                <div class="item-header">Class XII – CBSE (2022)</div>
-                <div class="item-sub">Result: 75%</div>
+                <div class="item-header">
+                    <span>Data Science Intern – EdiGlobe</span>
+                    <span>2026</span>
+                </div>
+                <ul>
+                    <li>Worked on data preprocessing, exploratory analysis, visualization, machine learning model development, and predictive analytics using Python and Scikit-learn.</li>
+                </ul>
             </div>
             <div class="item">
-                <div class="item-header">Class X – CBSE (2020)</div>
-                <div class="item-sub">Result: 75%</div>
+                <div class="item-header">
+                    <span>Cloud Computing Intern – Corizo</span>
+                    <span>Jun 15 – Sep 15</span>
+                </div>
+                <ul>
+                    <li>Gained hands-on experience with AWS services, cloud deployment concepts, and hosting web applications on cloud infrastructure.</li>
+                </ul>
             </div>
         </section>
 
         <section>
             <h2>TECHNICAL SKILLS</h2>
-            <div class="skills-grid">
-                <div class="skill-cat">Cybersecurity:</div>
-                <div>OWASP, Burp Suite, Penetration Testing, Web & Mobile App Security, XSS, Reconnaissance</div>
-
-                <div class="skill-cat">Programming:</div>
-                <div>Python, Java, JavaScript</div>
-
-                <div class="skill-cat">Web Dev:</div>
-                <div>Flask, React.js, Bootstrap, Full Stack (MERN), REST APIs</div>
-
-                <div class="skill-cat">Tools:</div>
-                <div>Kali Linux, Nmap, Wireshark, Postman, Git, VS Code</div>
-
-                <div class="skill-cat">Other:</div>
-                <div>Prompt Engineering, Vulnerability Assessment, Flask Web App Development</div>
-            </div>
+            <table class="skills-table">
+                <tr>
+                    <td class="cat">Programming Languages:</td>
+                    <td>Python, JavaScript, Java</td>
+                </tr>
+                <tr>
+                    <td class="cat">Data Science & Machine Learning:</td>
+                    <td>Pandas, NumPy, Scikit-learn, Matplotlib, NLP</td>
+                </tr>
+                <tr>
+                    <td class="cat">Web Development:</td>
+                    <td>React.js, Next.js, Flask, Tailwind CSS</td>
+                </tr>
+                <tr>
+                    <td class="cat">Databases:</td>
+                    <td>MongoDB, MySQL</td>
+                </tr>
+                <tr>
+                    <td class="cat">Cloud Computing:</td>
+                    <td>AWS, Amazon S3, Static Website Hosting</td>
+                </tr>
+                <tr>
+                    <td class="cat">Cybersecurity:</td>
+                    <td>OWASP, Burp Suite, Kali Linux, Penetration Testing</td>
+                </tr>
+                <tr>
+                    <td class="cat">Developer Tools:</td>
+                    <td>Git, GitHub, Postman, VS Code, Wireshark</td>
+                </tr>
+            </table>
         </section>
 
         <section>
             <h2>CERTIFICATIONS</h2>
-            <ul>
-                <li>Hackingflix (Cybersecurity & Ethical Hacking) – June 2025 – Present</li>
-                <li>Infosys Certification (Tech & AI) – June 2025 – Present</li>
-                <li>AI for Techies – Sept 2025 – Present</li>
-                <li>SCOA (Security & Cloud Operations Associate) – Sept 2025 – Present</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>INTERNSHIP EXPERIENCE</h2>
-            <div class="item">
-                <div class="item-header">Cyber Security Intern – 1Stop Solution</div>
-                <div class="item-sub">June 2025 – July 2025</div>
-                <ul>
-                    <li>Built internal cybersecurity tools for vulnerability scanning and testing.</li>
-                    <li>Assisted in penetration testing and bug fixing for client applications.</li>
-                    <li>Conducted app security assessments aligned with OWASP Top 10.</li>
-                </ul>
+            <div class="cert-line">
+                Hackingflix <span>—</span> Infosys Tech & AI <span>—</span> SCOA <span>—</span> AI for Techies
             </div>
         </section>
 
         <section>
-            <h2>PROJECTS</h2>
+            <h2>PROJECT PORTFOLIO</h2>
+            <p style="font-size: 13.5px; font-style: italic; color: var(--light-text); margin: 0 0 12px 0;">Machine Learning, Data Science, Web Development, and Cloud Projects</p>
+            
+            <h3 style="font-size: 14px; text-transform: uppercase; margin: 10px 0 8px 0; font-weight: 700;">DATA SCIENCE PROJECTS</h3>
+            
             <div class="item">
-                <div class="item-header">Information Gathering Tool</div>
-                <div class="item-sub">July 2025</div>
+                <div class="item-header">
+                    <span class="project-title">Student Marks Prediction</span>
+                    <span class="project-tech">Python, Pandas, Scikit-learn</span>
+                </div>
                 <ul>
-                    <li>Developed a Python-based tool for gathering website metadata and open-source intelligence.</li>
-                    <li>Automated reconnaissance processes to identify potential vulnerabilities.</li>
-                    <li>Tech Stack: Python, Requests, BeautifulSoup, Socket</li>
+                    <li>Developed a regression-based machine learning model to analyze historical student data and predict academic performance. Applied data preprocessing and feature analysis to understand factors influencing student marks.</li>
                 </ul>
             </div>
-        </section>
 
-        <section>
-            <h2>ACHIEVEMENTS</h2>
-            <ul>
-                <li>Completed multiple hands-on cybersecurity certifications.</li>
-                <li>Created custom tools for ethical hacking labs and testing environments.</li>
-                <li>Recognized for proactive learning in cybersecurity and AI integration.</li>
-            </ul>
-        </section>
+            <div class="item">
+                <div class="item-header">
+                    <span class="project-title">House Price Prediction</span>
+                    <span class="project-tech">Python, Pandas, Scikit-learn</span>
+                </div>
+                <ul>
+                    <li>Built a regression model to estimate property prices using housing-related features. Performed data cleaning, feature preparation, model training, and prediction to analyze relationships between property characteristics and prices.</li>
+                </ul>
+            </div>
 
-        <section>
-            <h2>LANGUAGES</h2>
-            <p style="font-size: 14px;">English (Fluent), Telugu (Fluent)</p>
+            <div class="item">
+                <div class="item-header">
+                    <span class="project-title">Heart Disease Prediction</span>
+                    <span class="project-tech">Python, Pandas, Scikit-learn</span>
+                </div>
+                <ul>
+                    <li>Developed a healthcare classification model to predict the likelihood of heart disease from patient-related medical features. Applied data preprocessing and machine learning techniques to support early predictive analysis.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="project-title">Fake News Detection</span>
+                    <span class="project-tech">Python, NLP, Scikit-learn</span>
+                </div>
+                <ul>
+                    <li>Built an NLP-based text classification system to identify potentially fake news articles. Processed textual data and applied machine learning algorithms to classify news content based on language patterns and features.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="project-title">Sentiment Analysis</span>
+                    <span class="project-tech">Python, NLP, Scikit-learn</span>
+                </div>
+                <ul>
+                    <li>Developed a text classification model to analyze opinions expressed in textual data and categorize sentiment. Applied natural language processing techniques for text preprocessing and machine learning-based sentiment prediction.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="project-title">Customer Churn Prediction</span>
+                    <span class="project-tech">Python, Pandas, Scikit-learn</span>
+                </div>
+                <ul>
+                    <li>Built a predictive classification model to identify customers likely to discontinue a service. Analyzed customer-related features and patterns to support proactive customer retention and business decision-making.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="project-title">Resume Screening</span>
+                    <span class="project-tech">Python, NLP, Machine Learning</span>
+                </div>
+                <ul>
+                    <li>Developed an automated resume analysis system using natural language processing techniques. Processed resume text and categorized candidate profiles to demonstrate machine learning applications in recruitment workflows.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="project-title">Movie Recommendation System</span>
+                    <span class="project-tech">Python, Pandas, Machine Learning</span>
+                </div>
+                <ul>
+                    <li>Built a content-based recommendation system that analyzes movie metadata and similarity patterns to generate relevant movie suggestions. Implemented recommendation logic to improve personalized content discovery.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="project-title">Sales Forecasting Dashboard</span>
+                    <span class="project-tech">Python, Pandas, Machine Learning</span>
+                </div>
+                <ul>
+                    <li>Analyzed historical sales data and developed forecasting models to identify trends and estimate future sales. Presented analytical insights to demonstrate how data-driven forecasting can support business planning.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="project-title">Fraud Detection System</span>
+                    <span class="project-tech">Python, Pandas, Scikit-learn</span>
+                </div>
+                <ul>
+                    <li>Developed a machine learning classification system to identify potentially fraudulent transactions. Analyzed transaction patterns and features to detect suspicious activity and support risk identification.</li>
+                </ul>
+            </div>
+
+            <h3 style="font-size: 14px; text-transform: uppercase; margin: 15px 0 8px 0; font-weight: 700;">MAJOR PROJECTS</h3>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="project-title">Healthcare Analytics and Disease Prediction System</span>
+                    <span class="project-tech">Python, Machine Learning, Scikit-learn</span>
+                </div>
+                <ul>
+                    <li>Integrated healthcare analytics and disease prediction capabilities into a unified system. The project combines data analysis and predictive modeling to generate insights from healthcare-related datasets.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="project-title">Business Intelligence and Customer Analytics Platform</span>
+                    <span class="project-tech">Python, Machine Learning, Data Analytics</span>
+                </div>
+                <ul>
+                    <li>Designed a business analytics platform combining customer churn prediction, sales forecasting, and recommendation capabilities. The project demonstrates how multiple machine learning models can support business intelligence and decision-making.</li>
+                </ul>
+            </div>
+
+            <h3 style="font-size: 14px; text-transform: uppercase; margin: 15px 0 8px 0; font-weight: 700;">FINAL MAJOR PROJECT</h3>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="project-title">AI-Powered Smart City Analytics Platform</span>
+                    <span class="project-tech">Python, Machine Learning, Web Development, AWS</span>
+                </div>
+                <ul>
+                    <li>Designed an integrated analytics platform combining Healthcare, Education, and Business modules. The platform brings together predictive models, analytical insights, and a centralized dashboard to demonstrate an enterprise-level AI analytics solution.</li>
+                </ul>
+            </div>
+
+            <h3 style="font-size: 14px; text-transform: uppercase; margin: 15px 0 8px 0; font-weight: 700;">WEB DEVELOPMENT PROJECTS</h3>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="project-title">PawCare</span>
+                    <span class="project-tech">Next.js, Prisma, Tailwind CSS</span>
+                </div>
+                <ul>
+                    <li>Developed a full-stack pet care platform featuring a responsive user interface and administrative dashboard for managing platform content and operations.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="project-title">Women Fashions</span>
+                    <span class="project-tech">React.js, Next.js, MongoDB</span>
+                </div>
+                <ul>
+                    <li>Developed an e-commerce platform with product management, database integration, responsive interfaces, and shopping cart functionality.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="project-title">Electro</span>
+                    <span class="project-tech">Web Development</span>
+                </div>
+                <ul>
+                    <li>Developed a responsive web application with a modern interface and interactive functionality focused on improving user experience.</li>
+                </ul>
+            </div>
+
+            <h3 style="font-size: 14px; text-transform: uppercase; margin: 15px 0 8px 0; font-weight: 700;">CLOUD COMPUTING PROJECT</h3>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="project-title">Static Website Hosting on AWS S3</span>
+                    <span class="project-tech">AWS, Amazon S3</span>
+                </div>
+                <ul>
+                    <li>Deployed a static website using Amazon S3 and configured the bucket for public website hosting. Demonstrated practical understanding of cloud storage, static website deployment, and AWS cloud infrastructure.</li>
+                </ul>
+            </div>
         </section>
     </div>
 
 </body>
 
-</html>
+</html>
